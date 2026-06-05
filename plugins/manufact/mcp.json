@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "manufact": {
+      "url": "https://mcp.manufact.com/mcp"
+    },
+    "mcp-use-docs": {
+      "url": "https://docs.mcp-use.com/mcp"
+    }
+  }
+}

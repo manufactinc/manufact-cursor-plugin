@@ -1,23 +1,18 @@
 {
-  "name": "cursor-plugin-starters",
+  "name": "manufact",
   "owner": {
-    "name": "Your Org",
-    "email": "plugins@example.com"
+    "name": "Manufact",
+    "email": "founders@manufact.com"
   },
   "metadata": {
-    "description": "Starter marketplace template for Cursor plugins",
+    "description": "Build, test, and deploy MCP servers and apps with mcp-use and Manufact",
     "version": "0.1.0"
   },
   "plugins": [
     {
-      "name": "starter-simple",
-      "source": "./plugins/starter-simple",
-      "description": "Minimal plugin with rules and skills only"
-    },
-    {
-      "name": "starter-advanced",
-      "source": "./plugins/starter-advanced",
-      "description": "Full-featured plugin with rules, skills, agents, commands, hooks, and MCP"
+      "name": "manufact",
+      "source": "./plugins/manufact",
+      "description": "Manufact MCP server, mcp-use docs MCP server, and the mcp-apps-builder skill for building MCP servers and apps"
     }
   ]
 }

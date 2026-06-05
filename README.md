@@ -1,34 +1,31 @@
-# Cursor plugin template
+# Manufact Cursor plugin
 
-Build and publish Cursor Marketplace plugins from a single repo.
+Cursor Marketplace plugin for building, testing, and deploying MCP servers and apps with [mcp-use](https://github.com/mcp-use/mcp-use) and [Manufact](https://manufact.com).
 
-Two starter plugins are included:
+## What's included
 
-- **starter-simple**: rules and skills only
-- **starter-advanced**: rules, skills, agents, commands, hooks, MCP, and scripts
+The [`manufact`](plugins/manufact) plugin bundles:
 
-## Getting started
+- **Manufact MCP server** (`https://mcp.manufact.com/mcp`) — deploy and manage MCP servers on Manufact (OAuth)
+- **mcp-use docs MCP server** (`https://docs.mcp-use.com/mcp`) — search the mcp-use SDK documentation
+- **`mcp-apps-builder` skill** — mcp-use best practices for building MCP servers and apps
 
-[Use this template](https://github.com/cursor/plugin-template/generate) to create a new repository, then customize:
+See [plugins/manufact/README.md](plugins/manufact/README.md) for details.
 
-1. `.cursor-plugin/marketplace.json`: set marketplace `name`, `owner`, and `metadata`.
-2. `plugins/*/.cursor-plugin/plugin.json`: set `name` (lowercase kebab-case), `displayName`, `author`, `description`, `keywords`, `license`, and `version`.
-3. Replace placeholder rules, skills, agents, commands, hooks, scripts, and logos.
+## Local development
 
-To add more plugins, see `docs/add-a-plugin.md`.
+```bash
+ln -s "$(pwd)/plugins/manufact" ~/.cursor/plugins/local/manufact
+```
 
-## Single plugin vs multi-plugin
+Then restart Cursor (or run **Developer: Reload Window**).
 
-This template defaults to **multi-plugin** (multiple plugins in one repo).
+## Validation
 
-For a **single plugin**, move your plugin folder contents to the repository root, keep one `.cursor-plugin/plugin.json`, and remove `.cursor-plugin/marketplace.json`.
+```bash
+node scripts/validate-template.mjs
+```
 
-## Submission checklist
+## Updating the bundled skill
 
-- Each plugin has a valid `.cursor-plugin/plugin.json`.
-- Plugin names are unique, lowercase, and kebab-case.
-- `.cursor-plugin/marketplace.json` entries map to real plugin folders.
-- All frontmatter metadata is present in rule, skill, agent, and command files.
-- Logos are committed and referenced with relative paths.
-- `node scripts/validate-template.mjs` passes.
-- Repository link is ready for submission to the Cursor team (Slack or `kniparko@anysphere.com`).
+The `mcp-apps-builder` skill is vendored from [mcp-use/mcp-use](https://github.com/mcp-use/mcp-use). To refresh it, copy `skills/mcp-apps-builder` from that repo into `plugins/manufact/skills/`.

@@ -1,0 +1,16 @@
+{
+  "name": "manufact",
+  "displayName": "Manufact",
+  "version": "0.1.0",
+  "description": "Build, test, and deploy MCP servers and apps with mcp-use and Manufact. Includes the Manufact MCP server, the mcp-use docs MCP server, and the mcp-apps-builder skill.",
+  "author": {
+    "name": "Manufact",
+    "email": "founders@manufact.com",
+    "url": "https://manufact.com"
+  },
+  "homepage": "https://manufact.com",
+  "repository": "https://github.com/manufactinc/manufact-cursor-plugin",
+  "license": "MIT",
+  "keywords": ["mcp", "mcp-use", "manufact", "mcp-server", "mcp-apps", "deploy", "skills"],
+  "logo": "assets/logo.svg"
+}
