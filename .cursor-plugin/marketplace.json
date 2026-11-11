@@ -5,14 +5,15 @@
     "email": "founders@manufact.com"
   },
   "metadata": {
-    "description": "Build, test, and deploy MCP servers and apps with mcp-use and Manufact",
-    "version": "0.1.0"
+    "description": "Build, deploy, test, and monitor MCP servers and plugins for the most popular AI Agents.",
+    "version": "2.2.0"
   },
   "plugins": [
     {
       "name": "manufact",
       "source": "./plugins/manufact",
-      "description": "Manufact MCP server, mcp-use docs MCP server, and the mcp-apps-builder skill for building MCP servers and apps"
+      "description": "Build, deploy, test, and monitor MCP servers and plugins for the most popular AI Agents.",
+      "version": "2.2.0"
     }
   ]
 }

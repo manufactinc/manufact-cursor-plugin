@@ -1,16 +1,17 @@
 # Manufact Cursor plugin
 
-Cursor Marketplace plugin for building, testing, and deploying MCP servers and apps with [mcp-use](https://github.com/mcp-use/mcp-use) and [Manufact](https://manufact.com).
+Build, deploy, test, and monitor MCP servers and plugins for the most popular AI Agents.
+
+The [`manufact`](plugins/manufact) plugin includes the skills and branding from the Manufact OpenAI plugin **2.2.0**, alongside the existing mcp-use builder skill and documentation connection.
 
 ## What's included
 
-The [`manufact`](plugins/manufact) plugin bundles:
+- **Manufact MCP server** (`https://mcp.manufact.com/mcp`) — deploy, configure, test, monitor, and prepare MCP servers and plugins for publishing. Connect your Manufact account through Cursor's OAuth flow on first use.
+- **mcp-use docs MCP server** (`https://docs.mcp-use.com/mcp`) — search and read the mcp-use SDK documentation.
+- **Five Manufact skills** — getting started, deployment, testing, analytics, and publishing, with their supporting references.
+- **`mcp-apps-builder` skill** — mcp-use best practices for building MCP servers and apps.
 
-- **Manufact MCP server** (`https://mcp.manufact.com/mcp`) — deploy and manage MCP servers on Manufact (OAuth)
-- **mcp-use docs MCP server** (`https://docs.mcp-use.com/mcp`) — search the mcp-use SDK documentation
-- **`mcp-apps-builder` skill** — mcp-use best practices for building MCP servers and apps
-
-See [plugins/manufact/README.md](plugins/manufact/README.md) for details.
+See [plugins/manufact/README.md](plugins/manufact/README.md) for the skill catalog, example prompts, and support links.
 
 ## Local development
 
@@ -26,6 +27,10 @@ Then restart Cursor (or run **Developer: Reload Window**).
 node scripts/validate-template.mjs
 ```
 
-## Updating the bundled skill
+## Updating the bundled skills and branding
 
-The `mcp-apps-builder` skill is vendored from [mcp-use/mcp-use](https://github.com/mcp-use/mcp-use). To refresh it, copy `skills/mcp-apps-builder` from that repo into `plugins/manufact/skills/`.
+The five Manufact skills, their references, and `assets/icon.png` / `assets/icon.svg` are sourced from the Manufact OpenAI plugin 2.2.0. Keep them synchronized with future OpenAI plugin releases. The getting-started skill adapts the authentication introduction for Cursor, where skills can be discovered before the MCP connection has authenticated.
+
+Map shared listing fields to `.cursor-plugin/plugin.json`, and keep the marketplace description and version in sync. Cursor-specific identity, repository, and connection configuration stay in this repository. Listing details without a Cursor manifest field (the full description, example prompts, and support/policy links) live in the plugin README.
+
+The retained `mcp-apps-builder` skill is vendored from [mcp-use/mcp-use](https://github.com/mcp-use/mcp-use). To refresh it, copy `skills/mcp-apps-builder` from that repo into `plugins/manufact/skills/`.
